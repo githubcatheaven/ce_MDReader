@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Markdown Reader</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main id="dropZone" class="shell">
+      <section class="hero" id="emptyState">
+        <div class="hero-card">
+          <span class="eyebrow">Markdown reader</span>
+          <h1>Drop an MD file here.</h1>
+          <p>Chrome will render it as a clean reading page with no upload and no setup.</p>
+          <div class="drop-hint">Supports all MD file types</div>
+        </div>
+      </section>
+      <article id="reader" class="reader" hidden></article>
+      <button class="side-drop side-drop-left" type="button" aria-label="Open a new MD file">
+        <span class="side-drop-content">
+          <img class="side-drop-cloud" src="Cloud.png" alt="" aria-hidden="true">
+          <span class="side-drop-title">Drop an MD file<br>to open it here</span>
+          <span class="side-drop-subtitle">Supports all MD file types</span>
+        </span>
+      </button>
+      <button class="side-drop side-drop-right" type="button" aria-label="Open a new MD file">
+        <span class="side-drop-content">
+          <img class="side-drop-cloud" src="Cloud.png" alt="" aria-hidden="true">
+          <span class="side-drop-title">Drop an MD file<br>to open it here</span>
+          <span class="side-drop-subtitle">Supports all MD file types</span>
+        </span>
+      </button>
+      <input id="filePicker" class="file-picker" type="file" accept=".md,.markdown,.mdown,.mkd,.mkdn,.mdwn,.mdtxt,.mdtext,text/markdown,text/x-markdown">
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
