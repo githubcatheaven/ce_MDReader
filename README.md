@@ -2,7 +2,8 @@
 
 MD Reader is a Chrome extension for opening local Markdown files as clean, readable HTML pages. It runs entirely in the browser: drop an `.md` file into the reader, and the extension renders it locally without upload, account setup, or external services.
 
-This project is being prepared for publication as a Chrome extension.
+## Chrome extension
+https://chromewebstore.google.com/detail/md-reader/fijgogdiegjahbdcdbmohebagcdeigmc
 
 ## Features
 
