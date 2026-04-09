@@ -71,6 +71,20 @@ body:has(.shell.reading) {
   background: color-mix(in srgb, var(--paper) 84%, transparent);
   box-shadow: var(--shadow);
   backdrop-filter: blur(22px);
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.hero-card:hover,
+.hero-card:focus-visible {
+  border-color: color-mix(in srgb, var(--accent) 70%, white);
+  box-shadow: 0 28px 76px rgb(24 35 66 / 20%);
+  transform: translateY(-2px);
+}
+
+.hero-card:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 24%, white);
+  outline-offset: 4px;
 }
 
 .eyebrow {

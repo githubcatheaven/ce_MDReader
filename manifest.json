@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "MD Reader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Drag a MD file on this page to read it as clean HTML.",
   "action": {
     "default_title": "Open Markdown Reader",

@@ -1,5 +1,6 @@
 const dropZone = document.querySelector("#dropZone");
 const emptyState = document.querySelector("#emptyState");
+const emptyStateCard = document.querySelector("#emptyStateCard");
 const reader = document.querySelector("#reader");
 const filePicker = document.querySelector("#filePicker");
 const sideDrops = [...document.querySelectorAll(".side-drop")];
@@ -514,6 +515,11 @@ function handleDroppedFiles(files) {
   if (file) openMarkdownFile(file);
 }
 
+function openFilePicker() {
+  log("debug", "file_picker_open_requested");
+  filePicker.click();
+}
+
 dropZone.addEventListener("dragenter", (event) => {
   event.preventDefault();
   dropZone.classList.add("dragging");
@@ -535,9 +541,19 @@ dropZone.addEventListener("drop", (event) => {
   handleDroppedFiles(event.dataTransfer.files);
 });
 
+emptyStateCard.addEventListener("click", () => {
+  openFilePicker();
+});
+
+emptyStateCard.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter" && event.key !== " ") return;
+  event.preventDefault();
+  openFilePicker();
+});
+
 for (const sideDrop of sideDrops) {
   sideDrop.addEventListener("click", () => {
-    filePicker.click();
+    openFilePicker();
   });
 
   sideDrop.addEventListener("dragenter", (event) => {
